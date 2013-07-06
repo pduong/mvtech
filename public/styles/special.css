@@ -1,0 +1,134 @@
+/* Large desktop */
+.list-product-2 {
+    margin-left: 0 !important;
+}
+.footer-menu{
+    padding-left: 15px;
+}
+.small-menu-toogle{
+    display: none;
+}
+.product-detail{
+    margin-top: 20px;
+}
+.product-detail h3{
+    text-transform: uppercase;
+    color: #0071BC;
+    font-weight: 700;
+}
+.product-detail p{
+    margin-top: 15px;
+}
+
+.static-content{
+    margin-top: 15px;
+}
+#nav li:first-child{
+    padding-left: 22px;
+}
+.details-page{
+    margin-top: 30px;
+}
+@media (min-width: 1200px) {
+
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) { 
+    #nav{
+        margin: 55px 0 0 36px;
+    }
+    #nav li {
+        float: left;
+        padding: 14px 12px;
+        border-bottom: 2px solid #0071bc;
+    }
+    #nav li:first-child {
+        padding-left: 15px;     
+    }
+    #header{
+        padding: 0;
+    }
+    #content{
+        padding: 0 12px;
+        margin: 0;
+        width: 96%;
+    }
+    .list-product{
+        margin: 0 5px;
+    }
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) { 
+    #header{
+        padding: 0;
+    }
+    .search-frm{
+        visibility: hidden;
+    }
+    #nav{
+        margin-left: 0px;
+        margin-top: 12px;
+    }
+    #nav li{
+        float: none;
+    }
+    #content{
+        padding: 0 12px;
+        margin: 0;
+        width: 96%;
+    }
+    .list-product{
+        margin: 0 5px;
+    }
+    .list-product .box + .box, .list-product .box + box + box{
+        padding-left: 0;
+    }
+    #footer{
+        background: #818385; /* Old browsers */
+        background: -moz-linear-gradient(top,  #818385 0%, #1e1d1e 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#818385), color-stop(100%,#1e1d1e)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  #818385 0%,#1e1d1e 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  #818385 0%,#1e1d1e 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  #818385 0%,#1e1d1e 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  #818385 0%,#1e1d1e 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#818385', endColorstr='#1e1d1e',GradientType=0 ); /* IE6-9 */
+    }
+    .logo img{
+        max-width: 100px;
+    }
+    #footer .logo{
+        display: none;
+    }
+    .small-menu-toogle{
+        display: block;
+        position: absolute;
+        top: 112px;
+        float: right; 
+        right: 10px;
+        z-index: 1;
+    }
+    .bottom-head .logo{
+        width: 50%;
+    }
+    .display-menu {
+        display: none !important;
+    }
+    .details-page img {
+        max-width: 750px;
+        width: 100%;
+    }
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) { 
+    .list-product{
+        margin: 0 2px;
+    }
+    #content{
+        padding: 0 10px;
+        margin: 0;
+        width: 96%;
+    }
+}
