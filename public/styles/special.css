@@ -29,6 +29,11 @@
 .details-page{
     margin-top: 30px;
 }
+
+.contacts{
+    margin-top: 20px;
+}
+
 @media (min-width: 1200px) {
 
 }
@@ -73,6 +78,27 @@
     }
     #nav li{
         float: none;
+    }
+    #nav li:hover{
+        background: #0071BC;
+        color: white;
+    }
+    #nav li:hover a {
+        color: white;
+    }
+    #nav li a:hover{
+        color: white;
+    }
+    #nav li.current{
+        border-radius: initial;        
+    }
+    #nav li:first-child{
+        border-top: 2px solid #0071bc;
+    }
+    .btn-primary {
+        background: #0071bc;
+        border-radius: 4px 4px 0 0;
+        border-bottom: none;
     }
     #content{
         padding: 0 12px;
@@ -129,6 +155,6 @@
     #content{
         padding: 0 10px;
         margin: 0;
-        width: 96%;
+        width: 95%;
     }
 }
