@@ -7,5 +7,5 @@ $(document).ready(function(){
             $("#nav").addClass("display-menu");
             $(".small-menu-toogle").css('top', '112px');
         }
-    });
+    });    
 });

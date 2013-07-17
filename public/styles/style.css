@@ -150,7 +150,7 @@ p{line-height: 1.4}
 #footer .nav li.email a {
     background: url(../images/bg-icon.png) 0px -188px no-repeat;}
 #header {
-    overflow: hidden;
+    /*overflow: hidden;*/
     max-width: 960px;
     margin: 0 auto;
     position: relative;
@@ -164,7 +164,7 @@ p{line-height: 1.4}
     margin-left: 26px;
 }
 .bottom-head {
-    overflow: hidden;
+    /*overflow: hidden;*/
     width: 100%;	
     padding: 67px 0 0 0;
 }
@@ -205,12 +205,12 @@ p{line-height: 1.4}
     color: #fff;
 }
 #main {
-    overflow: hidden;
+    /*overflow: hidden;*/
     margin: 35px auto 30px;
     /*width: 1000px;*/
 }
 #content {
-    overflow: hidden;
+    /*overflow: hidden;*/
     max-width: 960px;
     padding: 0 20px;
 }

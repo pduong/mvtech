@@ -5,7 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="/public/styles/bootstrap.css" media="screen" rel="stylesheet" type="text/css">
-        <link href="/public/styles/bootstrap-responsive.css" media="screen" rel="stylesheet" type="text/css">	
+        <link href="/public/styles/bootstrap-responsive.css" media="screen" rel="stylesheet" type="text/css">	        
         <link href="/public/styles/update.css" type="text/css" rel="stylesheet" />
         <link href="/public/styles/style.css" type="text/css" rel="stylesheet" />
         <link href="/public/styles/special.css" type="text/css" rel="stylesheet" />

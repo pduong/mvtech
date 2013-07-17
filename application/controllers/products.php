@@ -9,11 +9,12 @@ class Products extends CI_Controller {
         parent::__construct();
         $this->load->model("Products_model");
         $this->load->model("Categories_model");
+        $this->load->helper("pagination");
     }
 
     public function index() {
-        $data['bodycontent'] = "products/index";
-        $data['listProducts'] = $this->Products_model->getAll(0, ITEM_PRODUCT_HOME);
+        $data['bodycontent'] = "products/cat_index";
+        $data['listCats'] = $this->Categories_model->getAll(NULL, NULL);
         $this->load->view('layouts/index', $data);
     }
 
@@ -27,16 +28,12 @@ class Products extends CI_Controller {
     public function listproduct($strId) {
         $id = getIdFromStr($strId);
         $cat = $this->Categories_model->getCatById($id);
-        $data['cat'] = $cat;
-        $this->load->library('pagination');
-        $config['base_url'] = '/products/listproduct/' . convertViToEn($cat['category_name_' . LANG], $id) . "/";
-        $config['total_rows'] = count($this->Products_model->getAllByCatId($id));
-        $config['per_page'] = 1;
-        $config['uri_segment'] = 4;
-        $config['num_links'] = 4;        
-        $this->pagination->initialize($config);
-        $data['pagination'] = $this->pagination->create_links();
-
+        $data['cat'] = $cat;              
+        $url = '/products/listproduct/' . convertViToEn($cat['category_name_' . LANG], $id) . "/";
+        $total = count($this->Products_model->getAllByCatId($id));
+        $pagination = pagination($url, $total, PER_PAGE, 4, 4);
+        $data['pagination'] = $pagination->create_links();
+        
         $offset = $this->uri->segment(4, 0);
         $data['bodycontent'] = "products/index";
         $data['listProducts'] = $this->Products_model->getAllByCatId($id, $offset, 1);

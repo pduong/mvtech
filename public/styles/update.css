@@ -126,20 +126,19 @@ p{
 #footer .nav li.email a {
     background: url(../images/bg-icon.png) 0px -188px no-repeat;}
 #header {
-    overflow: hidden;    
+    /*overflow: hidden;*/    
     margin: 0 auto;
     position: relative;
     padding: 0 20px;
 }
 #header .logo{
     float: left;		
-
     z-index: 1;
     position: relative;
     margin-left: 26px;
 }
 .bottom-head {
-    overflow: hidden;
+    /*overflow: hidden;*/
     width: 100%;	
     padding: 67px 0 0 0;
 }

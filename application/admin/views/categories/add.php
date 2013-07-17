@@ -18,7 +18,16 @@
                         <div class="controls">
                             <input type="text" id="category_name_vi" name="category_name_vi" />
                         </div>
-                    </div>                   
+                    </div> 
+                    <div class="control-group">
+                        <label class="control-label" for="image">Image</label>
+                        <div class="controls">
+                            <input type="file" id="image" name="image" />                            
+                            <div class="note-upload">
+                                Extentions : png, gif, jpg and < <?php echo $this->config->item("max_size"); ?> kb
+                            </div>
+                        </div>                        
+                    </div>                                        
                 </fieldset>                    
                 <div class="form-actions">
                     <input type="hidden" name="section" value="text"/>             

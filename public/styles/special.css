@@ -1,4 +1,7 @@
 /* Large desktop */
+input {
+    height: 30px !important;
+}
 .list-product-2 {
     margin-left: 0 !important;
 }
@@ -26,6 +29,20 @@
 #nav li:first-child{
     padding-left: 22px;
 }
+/*menu*/
+#nav li ul {
+    /*display: none;*/
+    position: absolute;
+    z-index: 597;    
+    float: left;
+    direction: ltr;
+    clear: both;
+}
+#nav li ul li {
+    position: relative;
+    float: none;
+}
+
 .details-page{
     margin-top: 30px;
 }

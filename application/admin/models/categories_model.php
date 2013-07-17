@@ -8,6 +8,7 @@ class Categories_model extends CI_Model {
     function __construct() {
         // Call the Model constructor
         parent::__construct();
+        $this->load->helper("upload_helper");
     }
 
     function getAll() {
@@ -34,12 +35,20 @@ class Categories_model extends CI_Model {
         $array = array();        
         $array['category_name_vi'] = $data['category_name_vi'];
         $array['category_name_en'] = $data['category_name_en'];
+        
+        // upload image logo
+        $image = uploadFile("image", BASEPATH."../public/images/products/"); 
+        if(!empty($image['file_name'])){
+            $array['image'] = $image['file_name'];
+            removeFile(BASEPATH . "../public/images/products/" . $_POST['old_image']);
+        }
         return $this->db->update('product_categories', $array, array('id' => $id));
     }
 
     function delete($id) {
         $cat = $this->getById($id);
         if (!empty($cat)) {            
+            removeFile(BASEPATH . "../public/images/products/" . $cat['image']);
             return $this->db->delete("product_categories", array('id' => $id));
         }
         return FALSE;
@@ -50,6 +59,12 @@ class Categories_model extends CI_Model {
         $array['category_name_vi'] = $data['category_name_vi'];
         $array['category_name_en'] = $data['category_name_en'];
         $array['createdby'] = USER_ID;
+        
+        // upload image logo
+        $image = uploadFile("image", BASEPATH."../public/images/products/");
+        if(!empty($image['file_name'])){
+            $array['image'] = $image['file_name'];
+        }
         return $this->db->insert("product_categories", $array);
     }
 }
