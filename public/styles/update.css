@@ -181,7 +181,6 @@ p{
 
 #content {
     overflow: hidden;
-    max-width: 960px;
     padding: 20px 20px 0;
     min-height: 500px;
 }
@@ -222,47 +221,6 @@ p{
     color: #434343;
     font-size: 16px;
     text-transform: uppercase;
-}
-
-/* New project */
-.search-frm {
-    width: 210px;
-    overflow: hidden;
-    padding: 9px 7px 6px;
-    height: 29px;
-    position: absolute;
-    top: 2px;
-    right: 20px;
-    border-radius: 6px;
-    -webkit-border-radius: 6px;	
-    background-color: #3c8ec3;
-}
-.search-frm form {overflow: hidden;}
-.search-frm input {	
-    float: left;
-    width: 156px;
-    padding: 0 10px;
-    padding: 5px 10px\9;
-    border: none;
-    outline: none;
-    color: #73b0ff;
-    font-size: 14px;
-    font-family: 'AvantGarde';
-    background: transparent;
-}
-.search-frm button {
-    float: left;
-    width: 32px;
-    height: 26px;
-    border: none;
-    outline: none;
-    text-indent: -999em;
-    cursor: pointer;
-    background: url(../images/bg-icon.png) 0 0 no-repeat;
-}
-.search-frm button:hover {
-
-    background-position: 0 -57px;
 }
 
 .breadcumb {

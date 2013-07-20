@@ -7,13 +7,12 @@ class Customers extends CI_Controller {
 
     function __construct() {
         parent::__construct();
-        $this->load->model("Partners_model");
+        $this->load->model("Customers_model");
     }
 
     public function index() {
         $data['bodycontent'] = "customers/index";
-        $data['listPartners'] = $this->Partners_model->getAll();
-        ksort($data['listPartners']);
+        $data['listCustomers'] = $this->Customers_model->getAll();        
         $this->load->view('layouts/index', $data);
     }
 

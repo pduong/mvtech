@@ -51,6 +51,28 @@ input {
     margin-top: 20px;
 }
 
+.search-frm span{
+    float: right;
+}
+
+.search-frm span {
+    width: 50px;
+    margin-left: 10px;
+}
+.list-brand-1 div {
+    margin-bottom: 10px;
+}
+.row-fluid [class*="span"]{
+    margin-left: 0px;
+}
+
+.product-info {
+    padding-left: 10px;
+}
+.breadcumb {
+    text-transform: uppercase;
+}
+
 @media (min-width: 1200px) {
 
 }
@@ -85,10 +107,7 @@ input {
 @media (max-width: 767px) { 
     #header{
         padding: 0;
-    }
-    .search-frm{
-        visibility: hidden;
-    }
+    }    
     #nav{
         margin-left: 0px;
         margin-top: 12px;

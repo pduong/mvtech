@@ -5,6 +5,13 @@ if (!defined('BASEPATH'))
 
 if (!function_exists('send_emailMailer')) {
 
+    /**
+     * @param string $recipient email recieve
+     * @param string $sender email send
+     * @param string $name name of sender
+     * @param string $subject 
+     * @param string $message
+     */
     function send_emailMailer($recipient, $sender, $name, $subject, $message) {
         //require_once("PHPMailer/class.phpmailer.php");
         include "PHPMailer/class.phpmailer.php";

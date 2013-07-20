@@ -15,6 +15,7 @@ class Contact_model extends Abstract_model {
         $this->_primary_key = "id";
     }        
     
+    // get data contact
     function getById($id = NULL){
         if(empty($id)){
             $result = $this->fetchOneRow($this->_table);
@@ -22,6 +23,19 @@ class Contact_model extends Abstract_model {
             $result = $this->fetchOneRow($this->_table, array('id'=>$id));
         }
         return $result;
+    }
+    
+    function sendEmail(){        
+        $contact  = $this->getById();
+        $sender   = $this->input->post("email");
+        $name     = $this->input->post("name");
+        $subject  = $this->input->post("name")." from contact MTech";
+        $message  = "<b>Name:</b> ".$this->input->post("name")." <br/>";
+        $message .= "<b>Company:</b> ".$this->input->post("Company")." <br/>";
+        $message .= "<b>Phone:</b> ".$this->input->post("phone")." <br/>";
+        $message .= "<b>Email:</b> ".$this->input->post("email")." <br/>";
+        $message .= "<b>Content:</b> ".$this->input->post("contents")." <br/>";
+        return send_emailMailer($contact['email'], $sender, $name, $subject, $message);
     }
 }
 

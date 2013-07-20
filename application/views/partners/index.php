@@ -1,5 +1,5 @@
 <article class="partner-page">
-    <h2>PARTNERS</h2>
+    <h2><?php echo $this->lang->line("partners")?></h2>
     <ul class="list-brand-1">
         <?php
         $partnerNoSummary = 0;
@@ -7,7 +7,7 @@
         foreach ($listPartners as $key => $partner):
             if (!empty($partner['summary_' . LANG])):
                 ?>
-                <div class="row-fluid span12">
+                <div class="span12">
                     <div class="span4">
                         <img src="/public/images/partners/<?php echo $partner['logo']; ?>" alt="<?php echo $partner['partner_' . LANG] ?>"/>
                     </div>

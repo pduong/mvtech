@@ -211,7 +211,6 @@ p{line-height: 1.4}
 }
 #content {
     /*overflow: hidden;*/
-    max-width: 960px;
     padding: 0 20px;
 }
 .list-product {
@@ -220,7 +219,6 @@ p{line-height: 1.4}
 }
 .list-product .box {
     float: left;
-    /*width: 308px;*/
 }
 .list-product .box + .box, .list-product .box + box + box{
     padding-left: 18px;
@@ -258,10 +256,8 @@ p{line-height: 1.4}
     height: 29px;
     position: absolute;
     top: 2px;
-    right: 20px;
-    border-radius: 6px;
-    -webkit-border-radius: 6px;	
-    background-color: #3c8ec3;
+    right: 20px;   
+    
 }
 .search-frm input {	
     float: left;

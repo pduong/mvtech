@@ -8,7 +8,7 @@ if (!defined('BASEPATH'))
  */
 if ( ! function_exists('langurl')){
     function langurl(){
-        echo (LANG == "vi")?LANG."/":"";
+        return (LANG == "vi")?LANG."/":"";
     }
 }
 ?>
